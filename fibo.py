@@ -1,7 +1,20 @@
-n=int(input("soit Un>0 et n un entier naturel ; pour n="))
-def fib(n) :
-  if n< 2 :
-    return (n)
-  else :
-   return (fib(n-2)+ fib(n-1))
-print (fib(n))
+def fib(n, memo={}):
+    if n < 2:
+        return n
+    
+    if n not in memo:
+        memo[n] = fib(n-1, memo) + fib(n-2, memo)
+    
+    return memo[n]
+
+def main():
+    n = int(input("Entrez un entier naturel n (n > 0): "))
+    
+    if n <= 0:
+        print("Veuillez entrer un entier naturel supérieur à 0.")
+    else:
+        result = fib(n)
+        print(f"Le terme Fibonacci pour n={n} est : {result}")
+
+if __name__ == "__main__":
+    main()
