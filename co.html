@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Greetings</title>
+
+    <style>
+        body {
+            font-family: 'italic';
+            background-color: #e5c08e;
+            color: #905f29;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://st2.depositphotos.com/1708779/5402/v/950/depositphotos_54021705-stock-illustration-abstract-islamic-background-ramadan-theme.jpg');
+            background-size: cover;
+        }
+
+        header {
+            background-color: #b78333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #905f29;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        p::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #905f29;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #704b22;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            display: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #b78333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 0 0 8px 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ramadan Greetings</h1>
+    </header>
+
+    <script>
+        function getRamadanGreeting() {
+            try {
+                var promptInput = prompt("Enter your name for Ramadan greetings:");
+
+                if (promptInput !== null) {
+                    alert(`Ghamadan Mubaghak, ${promptInput}! Wa Kolo 3amin Wa Antom Biaalf Khayr (Click on OK for a lil surprise hihihi )`);
+                    document.getElementById('mr').style.display = 'block';
+                } else {
+                    alert("You cancelled the input.");
+                }
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+    </script>
+
+    <p>Idghat hona ya akhi / okhti fi lah:</p>
+    <button onclick="getRamadanGreeting()">Get Greeting</button>
+
+    
+    <img id="mr" src="https://i.imgflip.com/7g1lqy.jpg" alt="M Image">
+
+    <footer>
+        <p>&copy; 7o9o9 Nachr Ma7foda hihihihi</p>
+    </footer>
+
+</body>
+</html>
